@@ -68,7 +68,10 @@ const reducer = (state = initialState, action) => {
         }
         return state;
     } catch (e) {
-        console.log('Error')
+        return {
+            ...state,
+            printedOperations: 'Error!',
+        };
     }
 };
 
